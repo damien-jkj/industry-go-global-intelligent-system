@@ -5,6 +5,10 @@
 - [初步分析](initial-findings.md)记录已观察到的内容、初步设计及其依据。
 - [样本记录模板](sample-template.md)用于新增样本。每个样本用一份 Markdown，放入本目录的 `samples/`，例如 `samples/global-trade-helpdesk.md`。同一平台的查询结果、报告及操作说明可分节记录。
 
+## 已完成样本
+
+- [Global Trade Helpdesk](samples/global-trade-helpdesk.md)实测中国出口泰国的纯电乘用车场景，记录市场概览、关税与法规页，以及可转入报告规格的字段。
+
 ## 调研顺序
 
 | 样本类型 | 首轮候选 | 想看什么 |
