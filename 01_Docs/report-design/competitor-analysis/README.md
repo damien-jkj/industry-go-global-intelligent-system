@@ -2,6 +2,7 @@
 
 对应 [Issue #2](https://github.com/damien-jkj/industry-go-global-intelligent-system/issues/2)。研究结果用于确定出海分析报告的内容结构、字段、展示方式和引用规则。
 
+- [竞品差异与 2026 年设计取舍](differentiation.md)记录已有能力、差异化假设和验证方式。
 - [初步分析](initial-findings.md)记录已观察到的内容、初步设计及其依据。
 - [样本记录模板](sample-template.md)用于新增样本。每个样本用一份 Markdown，放入本目录的 `samples/`，例如 `samples/global-trade-helpdesk.md`。同一平台的查询结果、报告及操作说明可分节记录。
 
