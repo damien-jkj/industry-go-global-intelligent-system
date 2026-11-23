@@ -1,0 +1,42 @@
+# 竞品与报告样本研究
+
+对应 [Issue #2](https://github.com/damien-jkj/industry-go-global-intelligent-system/issues/2)。研究结果用于确定出海分析报告的内容结构、字段、展示方式和引用规则。
+
+- [竞品差异与 2026 年设计取舍](differentiation.md)记录已有能力、差异化假设和验证方式。
+- [初步分析](initial-findings.md)记录已观察到的内容、初步设计及其依据。
+- [样本记录模板](sample-template.md)用于新增样本。每个样本用一份 Markdown，放入本目录的 `samples/`，例如 `samples/global-trade-helpdesk.md`。同一平台的查询结果、报告及操作说明可分节记录。
+
+## 样本索引
+
+核心场景沿用中国出口泰国的纯电乘用车产品组（HS 870380）。商业报告、风险 App 和电商工具按各自可查的样本观察，在记录中标明适用范围。
+
+| 样本 | 类型 | 已查证据 | 适合借鉴 |
+| --- | --- | --- | --- |
+| [Global Trade Helpdesk](samples/global-trade-helpdesk.md) | 综合贸易平台 | 实测市场、关税及法规页 | 查询条件常驻，首屏概览与原始资料入口 |
+| [ITC Trade Map](samples/trade-map.md) | 贸易统计工具 | 手册、FAQ、新版说明，双边结果页停在加载提示 | 贸易流、统计期、单位与直接或镜像来源 |
+| [Market Access Map](samples/market-access-map.md) | 市场准入工具 | 官方方法及 FAQ，商品结果页停在安全验证 | 实际匹配税目、优惠条件与税率数据年份 |
+| [商务部泰国国别指南](samples/thailand-country-guide.md) | 官方国别报告 | 原始 PDF 目录及实页版式 | 数据表就地标注，政策与核查入口分层 |
+| [EMIS Insights](samples/emis-insights.md) | 商业行业报告 | 泰国汽车报告介绍、波兰保险报告公开样页 | 摘要指标排列与文档导航 |
+| [中国信保「信步天下」](samples/sinosure-xinbu.md) | 企业出海风险 App | 官方公开说明与历史界面资料 | 区分国别风险、行业风险和交易对手风险 |
+| [国家层面海外综合服务平台](samples/mofcom-overseas-services.md) | 中国出海公共服务 | 国别资料、赴泰投资提醒与办事入口 | 按业务阶段给出核查与办理入口 |
+| [欧盟 Access2Markets](samples/access2markets.md) | 产品准入工具 | 官方查询说明与公开示例 | 区分商品税目、优惠条件和原产资格 |
+| [美国商务部 Market Diversification Tool](samples/market-diversification-tool.md) | 市场比较工具 | 官方评分示例与打印报告说明 | 保留对比条件、权重和评分依据 |
+| [格兰德「查全球」](samples/grand-x315.md) | 贸易分析与企业尽调 | 公开市场查询入口、企业搜索及脱敏报告 | 按市场、商品、交易对手分层 |
+| [Amazon Product Opportunity Explorer](samples/amazon-opportunity-explorer.md) | 电商选品工具 | 公开教程和需求组示例 | 站点、需求组与指标口径随数据展示 |
+| [TikTok Shop Product Opportunities](samples/tiktok-shop-product-opportunities.md) | 电商选品工具 | 美国站卖家学院操作说明与示例 | 从趋势信号到商品匹配和后续核查 |
+
+[周边平台速览](landscape.md)将后六个样本按服务、准入、市场、信用和电商场景并列对照。
+
+## 首版报告可采纳的设计
+
+1. 首屏写清目标市场、原产地、商品范围与 HS 编码，摘要集中呈现市场信号、准入事项和待核验问题。
+2. 市场指标随数值保留统计期、单位、数据来源和统计方向。行业背景、商品贸易数据和平台站内数据分别标明口径。
+3. 准入记录关联实际税目或条款、适用条件、有效时间及来源。未查到、资料缺失和确认不适用使用不同状态。
+4. 每条待核验事项说明影响及下一步动作。将查看说明、核查原文和前往办理标成不同类型。报告打印或分享后，查询条件、图表口径和来源仍可读。
+5. 电商场景单列站点、渠道及商品分组。搜索热度、成交和履约信号各有口径，平台选品或上架条件与进口法规分别列出。
+
+## 如何形成报告设计
+
+1. 先留证据。记录访问日期、查询参数，尽量定位到实际结果、报告页码或说明章节。产品介绍与实际操作分别标明验证范围。
+2. 每看完一个样本，提炼一到三条具体做法。例如，统计期和单位跟着数值展示，用户点开结论可看到对应条款。
+3. 将重复出现或对当前场景有用的做法汇总到报告设计规格，写明采纳理由、所需字段和验收方法。
