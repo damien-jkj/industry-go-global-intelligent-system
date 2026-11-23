@@ -52,6 +52,7 @@ button:disabled {opacity:.55;cursor:default}
   td {border:0;padding:8px 12px;text-align:left!important}
   td::before {content:attr(data-label);display:block;font-size:.8rem;color:#496452}
 }
+.entry {display:flex;align-items:center;gap:16px;padding:10px 0;border-top:1px solid #d9dfd5}.entry button {flex:0 0 14em;text-align:left}.entry small {color:#445b50}@media(max-width:700px){.entry{display:block}.entry button{max-width:100%}}
 </style>
 <main><header><small>中国 → 泰国　/　新能源汽车</small><h1>泰国纯电乘用车市场进入初筛</h1><p><strong>报告示例 · 资料截至 2026-11-23</strong></p>
 <p><strong>查询条件</strong>　中国发货 → 泰国进口 · 全新纯电乘用整车 · 预计 2026 年 12 月 · 尚未确定当地合作方</p><div id="versionBox" hidden><label for="history">切换报告版本</label><select id="history"></select></div><p id="notice" role="status"></p><div id="changes"></div></header><nav aria-label="报告目录"><a href="#part0">市场进入初判</a><a href="#part1">市场机会和进入策略</a><a href="#part2">进口关税与泰国汽车政策</a><a href="#part3">商品准入与报价准备</a><a href="#part4">是否值得接洽泰国渠道</a><a href="#supplement">补充业务信息</a><a href="#part5">证据索引</a></nav><section id="part0"><h2>市场进入初判</h2><p><strong>值得接洽泰国渠道。优先验证两件事：车型在当地促销价下是否有竞争力，以及车辆能否取得协定原产证明。</strong></p>
@@ -180,11 +181,16 @@ button:disabled {opacity:.55;cursor:default}
 </tr>
 </tbody>
 </table><aside><strong>本版优先行动</strong><p id="action"></p><p id="pricing"></p><div id="terms" hidden><strong>企业补充的评估事项</strong><p id="termsText"></p></div></aside></section>
-<section id="supplement"><h2>补充业务信息</h2><div id="updatePrompt"><p>有新信息时，任选一项更新报告。</p><button id="open-note" aria-controls="editor">补充市场需求</button><button id="open-limit" aria-controls="editor">录入价格</button><button id="open-answer" aria-controls="editor">更新原产证明</button></div><p id="oldHint" hidden>你正在阅读历史版本。<button id="latest">返回最新版并补充信息</button></p><form id="editor" aria-label="补充业务信息" hidden><div id="group-answer" hidden><label for="answer">供应商提供这批车的产地证明了吗？</label><select id="answer"><option value="unknown">尚未确认供应商能否提供</option><option value="received">已收到 Form E 原产地证书，尚未核对</option><option value="unavailable">供应商确认本批暂时无法提供证明</option></select>
+<section id="supplement"><h2>补充业务信息</h2><div id="updatePrompt">
+<p>想让报告更贴近你的业务？写下一条情况，或选择要更新的测算。填写后可预览变更，再生成新版。</p>
+<div class="entry"><button id="open-note" aria-controls="editor" aria-describedby="noteHint">写下业务情况或其他要求</button><small id="noteHint">客群、车型、渠道限制或其他关注点，均可用自己的话写入报告。</small></div>
+<div class="entry"><button id="open-limit" aria-controls="editor" aria-describedby="priceHint">填写报价，比较价格空间</button><small id="priceHint">有渠道采购价或本方最低报价即可填。两项齐备后，计算每辆差额。</small></div>
+<div class="entry"><button id="open-answer" aria-controls="editor" aria-describedby="originHint">选择原产地证明状态</button><small id="originHint">供应商有新答复时，更新协定优惠的核查建议。</small></div>
+</div><p id="oldHint" hidden>你正在阅读历史版本。<button id="latest">返回最新版并补充信息</button></p><form id="editor" aria-label="补充业务信息" hidden><div id="group-answer" hidden><label for="answer">供应商提供这批车的产地证明了吗？</label><select id="answer"><option value="unknown">尚未确认供应商能否提供</option><option value="received">已收到 Form E 原产地证书，尚未核对</option><option value="unavailable">供应商确认本批暂时无法提供证明</option></select>
 </div><div id="group-limit" hidden><p>知道一个价格就可以填。比较两项价格时，请使用相同的交货地点和费用范围。</p>
 <label for="limit">泰国经销商可接受的最高采购价（选填，泰铢/辆）</label><input type="number" id="limit" min="0.01" step="0.01">
 <label for="floor">按普通关税待遇测算的最低报价（泰铢/辆，含所需毛利）</label><input type="number" id="floor" min="0.01" step="0.01">
-</div><div id="group-note" hidden><label for="note">还有哪些业务条件需要考虑？</label><textarea id="note" rows="3" maxlength="2000" placeholder="例如：希望先评估曼谷通勤市场，尚未找到当地售后合作方。"></textarea><small>原文将列入本企业的市场评估事项，供后续跟进。</small>
+</div><div id="group-note" hidden><label for="note">想在本次市场评估中补充什么？</label><textarea id="note" rows="3" maxlength="2000" placeholder="例如：希望先评估曼谷通勤市场，尚未找到当地售后合作方。"></textarea><small>此处可自由填写或修改，内容将作为企业自述列入「市场评估事项」。</small>
 </div><p id="preview" aria-live="polite"></p><button class="primary" id="save" disabled>生成更新版报告</button> <button type="button" id="cancel">取消</button></form></section>
 <section id="part5"><h2>证据索引</h2><ul>
 <li><a id="s1"></a><strong>S1 · IEA</strong>，《Global EV Outlook 2026》，东南亚销量章节及指标说明。<a href="https://www.iea.org/reports/global-ev-outlook-2026/trends-in-electric-cars">原文</a></li>
