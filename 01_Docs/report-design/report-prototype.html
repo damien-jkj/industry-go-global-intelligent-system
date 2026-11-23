@@ -31,7 +31,22 @@ section {scroll-margin:12px}
 #part5 li {margin-bottom:10px}
 @media(max-width:700px){main{padding:12px}section{padding:14px}section:not(#part0) table,section:not(#part0) tbody,section:not(#part0) tr,section:not(#part0) td{display:block;width:auto}section:not(#part0) thead{display:none}section:not(#part0) td{border:0;padding:5px 0}section:not(#part0) tr{padding:12px 0;border-top:1px solid #d9dfd5}#part0 td,#part0 th{padding:5px}}
 input,textarea {font:inherit;max-width:100%;padding:8px;border:1px solid #738c80;border-radius:5px;margin-bottom:12px} textarea {width:100%} #termsText {white-space:pre-wrap;overflow-wrap:anywhere} #notice:empty,#preview:empty {display:none}#part0 ul{padding-left:1.3em} #part0 li{margin:.45em 0} #part2 table{margin:14px 0} #part2 table:first-of-type{table-layout:auto} #part2 td strong{font-variant-numeric:tabular-nums;color:#215a45}
-@media(max-width:700px){#part2 td[data-label]::before{content:attr(data-label);display:block;font-size:.8rem;color:#4a6357}#part2 td{text-align:left!important}} </style>
+@media(max-width:700px){#part2 td[data-label]::before{content:attr(data-label);display:block;font-size:.8rem;color:#4a6357}#part2 td{text-align:left!important}}
+.vehicle-comparison {margin:16px 0;border:1px solid #a6b6aa}
+.vehicle-comparison th {background:#e3ebe3}
+.vehicle-comparison td:first-child {font-weight:600}
+.vehicle-comparison td:nth-child(2) {background:#f4f8f3;font-variant-numeric:tabular-nums}
+.vehicle-comparison td a {display:block;width:fit-content;margin-top:6px;font-size:.87em}
+@media(min-width:701px){
+  .vehicle-comparison :is(th,td)+:is(th,td) {border-left:1px solid #a6b6aa}
+  .vehicle-comparison th:first-child {width:26%}
+  .vehicle-comparison th:nth-child(2) {width:32%}
+}
+@media(max-width:700px){
+  #part1 .vehicle-comparison td {padding:8px 12px}
+  .vehicle-comparison td::before {content:attr(data-label);display:block;font-size:.8rem;color:#496452}
+}
+</style>
 <main><header><small>中国 → 泰国　/　新能源汽车</small><h1>泰国纯电乘用车市场进入初筛</h1><p><strong>报告示例 · 资料截至 2026-11-23</strong></p>
 <p><strong>查询条件</strong>　中国发货 → 泰国进口 · 全新纯电乘用整车 · 预计 2026 年 12 月 · 尚未确定当地合作方</p><div id="versionBox" hidden><label for="history">切换报告版本</label><select id="history"></select></div><p id="notice" role="status"></p><div id="changes"></div></header><nav aria-label="报告目录"><a href="#part0">市场进入初判</a><a href="#part1">市场机会和进入策略</a><a href="#part2">进口关税与泰国汽车政策</a><a href="#part3">商品准入与报价准备</a><a href="#part4">是否值得接洽泰国渠道</a><a href="#supplement">补充业务信息</a><a href="#part5">证据索引</a></nav><section id="part0"><h2>市场进入初判</h2><p><strong>值得接洽泰国渠道。优先验证两件事：车型在当地促销价下是否有竞争力，以及车辆能否取得协定原产证明。</strong></p>
 <ul>
@@ -40,29 +55,29 @@ input,textarea {font:inherit;max-width:100%;padding:8px;border:1px solid #738c80
 <li><strong>成本敏感项</strong>　假设计税价格每辆 50 万泰铢，候选税目下两种关税情景相差 40 万泰铢。具体车型归类、申报日税率和原产资格会改变结果。<a href="#part2">关税测算</a></li>
 </ul></section>
 <section id="part1"><h2>市场机会和进入策略</h2><p><strong>市场里已经有哪些选择？</strong> 泰国产电动汽车的销量占比从 2024 年约 5% 升至 2025 年 20%。进口车型会和本地生产的车型争夺同一批买家。以下先按日常通勤用纯电两厢车选出三款作参照。拿到拟出口车型的尺寸、配置和目标零售价后，可进一步缩小范围。<a href="#s1">S1</a></p>
-<table>
+<table class="vehicle-comparison">
 <thead>
 <tr>
-<th>泰国在售车型及配置</th>
-<th>每辆公开零售价（泰铢）</th>
-<th>售后或促销条件</th>
+<th scope="col">泰国在售车型及配置</th>
+<th scope="col">每辆公开零售价（泰铢）</th>
+<th scope="col">售后或促销条件</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>GAC AION UT 420 Standard</td>
-<td>车型页标价 <strong>519,900</strong>。<a href="https://www.gacgroup.com/th-th/hatchback/aion-ut">GAC 泰国车型页</a></td>
-<td>GAC 曾在活动中对动力电池、电机和电控提供附条件的终身保障。比较 12 月报价时，需看合同是否包含同等保障。<a href="https://www.gacgroup.com/th-th/news/article/gac-thailand-3rd-anniversary-promotions-195">GAC 活动条款</a></td>
+<td data-label="车型及配置">GAC AION UT 420 Standard</td>
+<td data-label="每辆零售价（泰铢）">车型页标价 <strong>519,900</strong>。<a href="https://www.gacgroup.com/th-th/hatchback/aion-ut">GAC 泰国车型页</a></td>
+<td data-label="售后或促销条件">GAC 曾在活动中对动力电池、电机和电控提供附条件的终身保障。比较 12 月报价时，需看合同是否包含同等保障。<a href="https://www.gacgroup.com/th-th/news/article/gac-thailand-3rd-anniversary-promotions-195">GAC 活动条款</a></td>
 </tr>
 <tr>
-<td>BYD Dolphin Standard Range</td>
-<td>公布售价 <strong>599,900</strong>，11 月活动净价 <strong>509,900</strong>，活动截至 11 月 30 日。<a href="https://www.reverautomotive.com/news/byd-dolphin-nov-2026-campaign">泰国经销商 RÊVER 活动条款 §2.1</a></td>
-<td>当期部分低首付方案不含赠送的保养套餐。比较报价时应同时看金融条件与保养权益。<a href="https://www.reverautomotive.com/news/byd-dolphin-nov-2026-campaign">活动条款 §2.2</a></td>
+<td data-label="车型及配置">BYD Dolphin Standard Range</td>
+<td data-label="每辆零售价（泰铢）">公布售价 <strong>599,900</strong>，11 月活动净价 <strong>509,900</strong>，活动截至 11 月 30 日。<a href="https://www.reverautomotive.com/news/byd-dolphin-nov-2026-campaign">泰国经销商 RÊVER 活动条款 §2.1</a></td>
+<td data-label="售后或促销条件">当期部分低首付方案不含赠送的保养套餐。比较报价时应同时看金融条件与保养权益。<a href="https://www.reverautomotive.com/news/byd-dolphin-nov-2026-campaign">活动条款 §2.2</a></td>
 </tr>
 <tr>
-<td>MG4 MY2026 D Standard Range</td>
-<td>车型页标价 <strong>669,900</strong>。<a href="https://www.mgcars.com/en/cars/mg4-my2026">MG 泰国车型页</a></td>
-<td>厂方规格册列示整车质保 <strong>4 年或 12 万公里</strong>。<a href="https://mg-upload.sgp1.cdn.digitaloceanspaces.com/fdebbe8eb59428ff636625b1d33fb7be.pdf">MG4 规格册</a></td>
+<td data-label="车型及配置">MG4 MY2026 D Standard Range</td>
+<td data-label="每辆零售价（泰铢）">车型页标价 <strong>669,900</strong>。<a href="https://www.mgcars.com/en/cars/mg4-my2026">MG 泰国车型页</a></td>
+<td data-label="售后或促销条件">厂方规格册列示整车质保 <strong>4 年或 12 万公里</strong>。<a href="https://mg-upload.sgp1.cdn.digitaloceanspaces.com/fdebbe8eb59428ff636625b1d33fb7be.pdf">MG4 规格册</a></td>
 </tr>
 </tbody>
 </table>
