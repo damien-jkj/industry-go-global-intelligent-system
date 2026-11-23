@@ -17,20 +17,143 @@ button,select {font:inherit;padding:7px 12px;border-radius:5px;border:1px solid 
 button {cursor:pointer}
 button.primary {background:#205541;color:white}
 select {max-width:100%;margin:8px 0}
+
+main {max-width:1020px}
+nav {display:flex;gap:8px 18px;flex-wrap:wrap;padding:18px 0}
+a {color:#166049;text-underline-offset:3px}
+table {width:100%;border-collapse:collapse;table-layout:fixed}
+td,th {vertical-align:top;text-align:left;padding:12px;border-bottom:1px solid #d9dfd5;overflow-wrap:anywhere}
+th {background:#eff3eb}
+blockquote,aside {margin:12px 0;padding:10px 16px;border-left:3px solid #517d60;background:#f3f6ef}
+section {scroll-margin:12px}
+#part0 th {font-size:1.45em;color:#23583f}
+#part5 ul {padding-left:20px}
+#part5 li {margin-bottom:10px}
+@media(max-width:700px){main{padding:12px}section{padding:14px}section:not(#part0) table,section:not(#part0) tbody,section:not(#part0) tr,section:not(#part0) td{display:block;width:auto}section:not(#part0) thead{display:none}section:not(#part0) td{border:0;padding:5px 0}section:not(#part0) tr{padding:12px 0;border-top:1px solid #d9dfd5}#part0 td,#part0 th{padding:5px}}
 </style>
-<main>
-<header><small>出海报告设计样例 · 中国 → 泰国 · 计划 2026 年 12 月进口</small><h1>纯电乘用整车试单初筛</h1><label for="history">查看报告版本</label><select id="history"></select></header>
-<section><h2>市场与政策判断</h2><p>泰国 2025 年电动汽车销量约 14 万辆，含纯电和插混。安排经销商询价时，同时比较进口车型和泰国产车型。</p><p>本批整车计划进口时间已超出 EV3.5 的 2024 至 2025 年整车进口减免窗口，基准报价应剔除这项减免。</p><small><a href="https://www.iea.org/reports/global-ev-outlook-2026/trends-in-electric-cars">IEA 市场数据</a> · <a href="https://www.boi.go.th/index.php?_mod=&amp;language=en&amp;page=press_releases_detail&amp;topic_id=134676">泰国 BOI 政策说明</a></small></section>
-<section><h2>协定优惠能否计入报价？</h2><p id="finding"></p><button id="edit">补充供应商回音</button>
-<form id="editor" hidden><label for="answer">供应商提供这批车的产地证明了吗？</label><select id="answer"><option value="unknown">还没问到</option><option value="received">已收到 Form E 原产地证书，尚未核对</option><option value="unavailable">供应商确认本批暂时无法提供证明</option></select><p>此答案用于更新优惠测算和试单建议。</p><button class="primary" id="save" disabled>生成更新版</button> <button type="button" id="cancel">取消</button></form></section>
-<section><h2>是否推进首批试单</h2><p id="action"></p><small>进入谈判的条件：最低报价在渠道采购价上限以内，且车型手续和交期已确认。</small></section>
-<p id="notice" role="status"></p><small>离线交互样例。仅在本次打开期间保留版本，使用预设案例演示。</small>
-</main>
+<main><header><small>中国 → 泰国　/　新能源汽车</small><h1>泰国纯电乘用车市场进入初筛</h1><p><strong>报告示例 · 资料截至 2026-11-23</strong></p>
+<p><strong>本次业务</strong> 中国发货至泰国，新纯电乘用整车，拟通过当地进口商销售。本报告按纯电乘用车类别（HS 870380）查询商品资料。采购计划为 2026 年 12 月进口，尚未确定具体申报日。目标是判断是否值得安排下一轮市场和成本调研。</p><label for="history">查看报告版本</label><select id="history"></select></header><nav aria-label="报告目录"><a href="#part0">执行摘要</a><a href="#part1">市场机会和进入策略</a><a href="#part2">政策如何影响这笔订单</a><a href="#part3">商品准入与报价准备</a><a href="#part4">是否推进首批试单</a><a href="#part5">证据索引</a></nav><section id="part0"><h2>执行摘要</h2><blockquote>
+<p><strong>建议进入渠道与成本调研。</strong> 泰国电动汽车市场已有可观销量，中国制造车型也有较高份额。拟于 2026 年 12 月进口，基准报价应剔除 EV3.5 在 2024 至 2025 年给予部分进口整车的关税减免。同价位对标应同时覆盖进口车型与泰国产车型。给客户正式报价前，先确认每辆车的进口成本和可交付日期。<a href="#s1">S1</a> · <a href="#s2">S2</a></p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>约 14 万辆</th>
+<th>同比约 +70%</th>
+<th>约 75%</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>泰国 2025 年电动汽车销量</td>
+<td>较 2024 年增长</td>
+<td>泰国 2025 年电动汽车销量中，中国制造车型所占比例</td>
+</tr>
+<tr>
+<td><a href="#s1">IEA · S1</a></td>
+<td><a href="#s1">IEA · S1</a></td>
+<td><a href="#s1">IEA · S1</a></td>
+</tr>
+</tbody>
+</table>
+<p>IEA 的电动汽车口径包含纯电和插混。以上指标说明本地终端市场规模与竞争环境，供整车出口初筛参考。<a href="#s1">S1</a></p></section>
+<section id="part1"><h2>市场机会和进入策略</h2><ul>
+<li><strong>有市场，也有成熟竞争。</strong> 中国制造车型已有较高份额，建议找当地进口商收集 3 款同价位、同用途车型的终端报价、交付时长、质保与售后安排。把这些作为渠道访谈问题，判断该车型能靠什么获得订单。<a href="#s1">S1</a></li>
+<li><strong>成本比较要纳入本地生产。</strong> IEA 记录的泰国产电动汽车销量占比从 2024 年约 5% 升至 2025 年 20%。对标时纳入泰国产车型和进口车型，并分别取落地成本。泰国 BOI 公布的 EV3／EV3.5 调整涉及参与计划企业的本地生产承诺，普通整车出口报价先按已确认的适用条件测算。<a href="#s1">S1</a> · <a href="#s2">S2</a></li>
+</ul>
+<p><strong>可用于渠道访谈的价格参照。</strong> 比亚迪 Dolphin 在泰国从进口转为当地生产。按 IEA 汇总的挂牌价，2024 年约 70 万泰铢，2025 年约 64 万泰铢。若拟出口车型与其定位接近，向经销商索取同配置的最新成交价，并倒推可接受的进口成本。历史挂牌价只作比较起点。<a href="#s1">S1</a></p></section>
+<section id="part2"><h2>政策如何影响这笔订单</h2><table>
+<thead>
+<tr>
+<th>政策问题</th>
+<th>官方资料给出的规则</th>
+<th>对本单的判断</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>EV3.5 能给这批进口车降低成本吗？</strong></td>
+<td>泰国投资促进委员会（BOI）介绍的 EV3.5 计划覆盖 2024 至 2027 年。其中，价格不超过 200 万泰铢的纯电乘用整车进口减免限于 2024 至 2025 年。<a href="#s2">S2</a></td>
+<td>计划总期限与整车进口减免期限不同。即使车价低于门槛，本单计划进口时间也已经越过该窗口。编制 12 月报价时剔除这项减免。</td>
+</tr>
+<tr>
+<td><strong>本地竞争车型受到什么政策影响？</strong></td>
+<td>泰国电动车政策委员会后续决定把补贴拨付与参与厂商完成本地生产承诺挂钩。EV3.5 项下本地产车登记期限由 2027 年 12 月延至 2028 年 1 月。<a href="#s2">S2</a></td>
+<td>延期针对本地产车登记。对于采用整车出口的企业，这项政策影响竞品选择。应把同价位泰国产车型单列对标，并向经销商核实实际成交价及促销条件。</td>
+</tr>
+<tr>
+<td><strong>还有哪条降低进口关税的路径？</strong></td>
+<td>中国—东盟自贸协定设有原产地规则及 Form E 证明路径。泰国海关公布了中国签发的证书样式。<a href="#s4">S4</a></td>
+<td>让进口商按车型税目分别测算普通待遇和协定待遇。后者以该税目的协定税率、产品原产规则和本批证明为条件。基准预算采用普通待遇，优惠情景另列。</td>
+</tr>
+</tbody>
+</table></section>
+<section id="part3"><h2>商品准入与报价准备</h2><p><strong>现在可以询每辆车的采购价和运费。含泰国进口税费的到货价，以及能上牌交付的日期，还需要两份书面回复才能确定。</strong></p>
+<table>
+<thead>
+<tr>
+<th>业务问题</th>
+<th>本单目前能确定什么</th>
+<th>下一步拿什么</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>给经销商报什么价？</strong></td>
+<td>可先按约定交货地点报车价，写清运费与进口税费由谁承担。HS 870380 是纯电乘用车的大类，仅凭这个编码无法算出这款车每辆要缴多少进口税。<a href="#s3">S3</a></td>
+<td>将车型规格、预计进口月份和交货地点发给泰国进口商，索取<strong>每辆税费明细</strong>，列明申报商品编码、计税依据、币种和金额。拿到后再合成含税到货价。</td>
+</tr>
+<tr>
+<td><strong>优惠能算进售价吗？</strong></td>
+<td><span id="finding"></span> <a href="#s4">S4</a></td><td><p id="followup"></p><button id="edit">补充供应商回音</button>
+<form id="editor" hidden><label for="answer">供应商提供这批车的产地证明了吗？</label><select id="answer"><option value="unknown">还没问到</option><option value="received">已收到 Form E 原产地证书，尚未核对</option><option value="unavailable">供应商确认本批暂时无法提供证明</option></select><p>此答案用于更新优惠测算和试单建议。</p><button class="primary" id="save" disabled>生成更新版</button> <button type="button" id="cancel">取消</button></form></td></tr>
+<tr>
+<td><strong>能向客户承诺哪天交车吗？</strong></td>
+<td>泰国标准 TIS 3026-2563 涉及 M、N 类车辆的电驱动系统。该标准可用于识别应查的技术文件。本车型的登记手续和办理时间尚未确认。<a href="#s5">S5</a></td>
+<td>向厂家索取车型规格和已有电驱动测试报告，请进口商回复<strong>车型办理清单</strong>，列出可沿用的报告、需要补办的手续及预计完成日。据此确定可承诺的交期。</td>
+</tr>
+</tbody>
+</table></section>
+<section id="part4"><h2>是否推进首批试单</h2><p><strong>本轮建议先询价，暂缓对外承诺价格和交期。</strong> 决策要看两个数能否对上，以及首批车能否按期交付。</p>
+<table>
+<thead>
+<tr>
+<th>谁跟进</th>
+<th>要拿到的结果</th>
+<th>用来判断什么</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>业务负责人联系泰国经销商</td>
+<td>用同配置竞品的近期成交价作参照，请经销商给出首批可接受的每辆采购价、交货地点和最晚到货日。</td>
+<td>得到渠道实际愿付的上限。零售挂牌价只能作访谈参照。</td>
+</tr>
+<tr>
+<td>出口业务负责人会同进口商</td>
+<td>按相同币种、交货地点和费用承担方式，取得普通关税待遇下的成本明细，计入本方承担的物流、税费和售后成本，再按公司最低毛利要求算出每辆最低报价。进口商另确认车型手续和预计交付日。</td>
+<td>得到可承接价格和交期。协定优惠单列测算，凭证及资格核对后再计入可承诺报价。</td>
+</tr>
+</tbody>
+</table>
+<p><strong>如何决定。</strong> 最低报价在渠道上限以内、车型手续已确认且交期能满足时，进入首批数量和付款条件谈判。若只有计入协定优惠才算得过来，先核对本批原产证明，再重算价格。即使采用已确认的优惠仍超出渠道上限，就调整采购价或渠道条件后再谈。手续或交期尚未确认时，可继续询价并保留交期条件。</p><aside><strong>本版优先行动</strong><p id="action"></p></aside></section>
+<section id="part5"><h2>证据索引</h2><ul>
+<li><a id="s1"></a><strong>S1 · IEA</strong>，《Global EV Outlook 2026》，东南亚销量章节及指标说明。<a href="https://www.iea.org/reports/global-ev-outlook-2026/trends-in-electric-cars">原文</a></li>
+<li><a id="s2"></a><strong>S2 · 泰国 BOI</strong>，首份说明中关于 200 万泰铢及 CBU 的段落给出进口减免窗口。后续决定 I.1–2 列明本地产车登记期限与补贴拨付条件。<a href="https://www.boi.go.th/index.php?_mod=&amp;language=en&amp;page=press_releases_detail&amp;topic_id=134676">EV3.5 原方案说明</a> · <a href="https://osos.boi.go.th/EN/news/2302/EV-Board-Approves-Policy-Refresh-to-Strengthen-Thailand%E2%80%99s-Electric-Vehicle-Ambitions/">政策委员会调整说明</a></li>
+<li><a id="s3"></a><strong>S3 · 泰国海关</strong>，按商品描述、商品编码和进口日期核对进口税则。<a href="https://ccc.customs.go.th/data_files/161221105447573888702.pdf">查询说明</a> · <a href="https://www.customs.go.th/list_strc_link_image_with_infographic.php?ini_content=customs_tariff_service&amp;lang=en">税则服务</a></li>
+<li><a id="s4"></a><strong>S4 · ASEAN Tariff Finder</strong>，中国—东盟自贸区说明，含原产地证书指引。<a href="https://tariff-finder.asean.org/index.php?page=acfta">协定指引</a> · <a href="https://www.customs.go.th/data_files/2bce7d8f56f91e2b78141a868ccc67a9.pdf">泰国海关 Form E 样式，附件 4-2、4-3</a></li>
+<li><a id="s5"></a><strong>S5 · 泰国 TISI</strong>，标准目录，按 TIS 3026-2563 查找。<a href="https://i.tisi.go.th/e-license/index.php/service/standards">官方目录</a></li>
+</ul></section><p id="notice" role="status"></p><small>离线案例 · 本次打开期间可回看各版本。</small></main>
 <script>
 const copy = {
   unknown: ['本批原产证明情况未知。先按普通待遇询价，协定优惠单列。','向经销商询问可接受的采购价，同时向供应商了解能否出具本批原产证明。'],
   received: ['已记录企业反馈：收到 Form E。优惠测算现可进入核对环节。','请进口商核对证书对应的商品、发票及适用原产规则。核对通过后重算最低报价，再与渠道上限比较。'],
   unavailable: ['供应商反馈本批暂时无法提供证明。当前报价采用普通待遇。','直接比较普通待遇下的最低报价和渠道上限。若超出上限，重新协商采购价或渠道条件。']
+};
+const followups = {
+  unknown: '请供应商确认制造地，以及能否为本批车辆提供 Form E 原产地证书。',
+  received: '将证书与本批发票、车型说明交进口商核对。确认适用后索取优惠待遇下的每辆税费明细。',
+  unavailable: '请进口商按普通待遇出具税费明细，用它核算本批最低报价。'
 };
 const versions = ['unknown'];
 const el = id => document.getElementById(id);
@@ -39,6 +162,7 @@ function render(index) {
   const [finding, action] = copy[versions[index]];
   historySelect.value = String(index);
   el('finding').textContent = finding;
+  el('followup').textContent = followups[versions[index]];
   el('action').textContent = action;
   el('editor').hidden = true;
   el('edit').hidden = index !== versions.length - 1;
