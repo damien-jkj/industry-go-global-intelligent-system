@@ -6,7 +6,7 @@
 | --- | --- | --- |
 | 1 | [竞品与报告样本分析](competitor-analysis/README.md) | 含 12 份样本及[差异与设计取舍](competitor-analysis/differentiation.md)。 |
 | 2 | [报告设计规格](report-spec.md) | v0.4 待组内评审，含生成前输入、市场判断、政策影响、商品准入与行动、证据状态和验收用例。 |
-| 3 | [场景示例](report-example.md) | 面向业务人员的泰国整车初筛报告，附生成前输入和一次补充后的变化示例。 |
+| 3 | [场景示例](report-example.md) | 面向业务人员的泰国整车初筛报告，附[可点击的更新示例](report-prototype.html)，下载后可离线演示。 |
 
 ## 设计讨论与文档维护
 

@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="zh-CN">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>泰国纯电乘用车 · 试单初筛</title>
+<style>
+* {box-sizing:border-box}
+body {margin:0;background:#f6f5ef;color:#1d332c;font:16px/1.65 "Source Sans 3","PingFang SC",sans-serif}
+main {max-width:800px;margin:4vh auto;padding:24px}
+header {border-bottom:2px solid #25634f;padding-bottom:18px}
+h1 {font-size:clamp(27px,5vw,42px);line-height:1.2;margin:12px 0}
+h2 {font-size:20px;margin:0 0 8px}
+p {margin:6px 0 14px}
+section,form {margin:18px 0;background:#fff;padding:20px;border:1px solid #d1d7cc;border-radius:8px}
+small,label {display:block}
+button,select {font:inherit;padding:7px 12px;border-radius:5px;border:1px solid #738c80;background:white;color:#204737}
+button {cursor:pointer}
+button.primary {background:#205541;color:white}
+select {max-width:100%;margin:8px 0}
+</style>
+<main>
+<header><small>出海报告设计样例 · 中国 → 泰国 · 计划 2026 年 12 月进口</small><h1>纯电乘用整车试单初筛</h1><label for="history">查看报告版本</label><select id="history"></select></header>
+<section><h2>市场与政策判断</h2><p>泰国 2025 年电动汽车销量约 14 万辆，含纯电和插混。安排经销商询价时，同时比较进口车型和泰国产车型。</p><p>本批整车计划进口时间已超出 EV3.5 的 2024 至 2025 年整车进口减免窗口，基准报价应剔除这项减免。</p><small><a href="https://www.iea.org/reports/global-ev-outlook-2026/trends-in-electric-cars">IEA 市场数据</a> · <a href="https://www.boi.go.th/index.php?_mod=&amp;language=en&amp;page=press_releases_detail&amp;topic_id=134676">泰国 BOI 政策说明</a></small></section>
+<section><h2>协定优惠能否计入报价？</h2><p id="finding"></p><button id="edit">补充供应商回音</button>
+<form id="editor" hidden><label for="answer">供应商提供这批车的产地证明了吗？</label><select id="answer"><option value="unknown">还没问到</option><option value="received">已收到 Form E 原产地证书，尚未核对</option><option value="unavailable">供应商确认本批暂时无法提供证明</option></select><p>此答案用于更新优惠测算和试单建议。</p><button class="primary" id="save" disabled>生成更新版</button> <button type="button" id="cancel">取消</button></form></section>
+<section><h2>是否推进首批试单</h2><p id="action"></p><small>进入谈判的条件：最低报价在渠道采购价上限以内，且车型手续和交期已确认。</small></section>
+<p id="notice" role="status"></p><small>离线交互样例。仅在本次打开期间保留版本，使用预设案例演示。</small>
+</main>
+<script>
+const copy = {
+  unknown: ['本批原产证明情况未知。先按普通待遇询价，协定优惠单列。','向经销商询问可接受的采购价，同时向供应商了解能否出具本批原产证明。'],
+  received: ['已记录企业反馈：收到 Form E。优惠测算现可进入核对环节。','请进口商核对证书对应的商品、发票及适用原产规则。核对通过后重算最低报价，再与渠道上限比较。'],
+  unavailable: ['供应商反馈本批暂时无法提供证明。当前报价采用普通待遇。','直接比较普通待遇下的最低报价和渠道上限。若超出上限，重新协商采购价或渠道条件。']
+};
+const versions = ['unknown'];
+const el = id => document.getElementById(id);
+const historySelect = el('history');
+function render(index) {
+  const [finding, action] = copy[versions[index]];
+  historySelect.value = String(index);
+  el('finding').textContent = finding;
+  el('action').textContent = action;
+  el('editor').hidden = true;
+  el('edit').hidden = index !== versions.length - 1;
+}
+function appendVersion() {
+  const index = versions.length - 1;
+  historySelect.add(new Option('第 ' + (index + 1) + ' 版 · ' + el('answer').selectedOptions[0].text, String(index)));
+  render(index);
+}
+historySelect.onchange = () => { render(Number(historySelect.value)); el('notice').textContent = ''; };
+el('edit').onclick = () => {
+  el('answer').value = versions[versions.length - 1];
+  el('save').disabled = true;
+  el('editor').hidden = false;
+  el('answer').focus();
+};
+el('answer').onchange = () => { el('save').disabled = el('answer').value === versions[versions.length - 1]; };
+el('cancel').onclick = () => { el('editor').hidden = true; el('edit').focus(); };
+el('editor').onsubmit = event => {
+  event.preventDefault();
+  if (el('answer').value === versions[versions.length - 1]) return;
+  versions.push(el('answer').value);
+  appendVersion();
+  el('notice').textContent = '本次更新了协定优惠测算和试单建议。可从页首回看上一版。';
+  historySelect.focus();
+};
+appendVersion();
+</script>
+</html>
