@@ -106,7 +106,7 @@ section {scroll-margin:12px}
 <tr>
 <td><strong>优惠能算进售价吗？</strong></td>
 <td><span id="finding"></span> <a href="#s4">S4</a></td><td><p id="followup"></p><button id="edit">补充供应商回音</button>
-<form id="editor" hidden><label for="answer">供应商提供这批车的产地证明了吗？</label><select id="answer"><option value="unknown">还没问到</option><option value="received">已收到 Form E 原产地证书，尚未核对</option><option value="unavailable">供应商确认本批暂时无法提供证明</option></select><p>此答案用于更新优惠测算和试单建议。</p><button class="primary" id="save" disabled>生成更新版</button> <button type="button" id="cancel">取消</button></form></td></tr>
+<form id="editor" hidden><label for="answer">供应商提供这批车的产地证明了吗？</label><select id="answer"><option value="unknown">尚未确认供应商能否提供</option><option value="received">已收到 Form E 原产地证书，尚未核对</option><option value="unavailable">供应商确认本批暂时无法提供证明</option></select><p>此答案用于更新优惠测算和试单建议。</p><button class="primary" id="save" disabled>生成更新版</button> <button type="button" id="cancel">取消</button></form></td></tr>
 <tr>
 <td><strong>能向客户承诺哪天交车吗？</strong></td>
 <td>泰国标准 TIS 3026-2563 涉及 M、N 类车辆的电驱动系统。该标准可用于识别应查的技术文件。本车型的登记手续和办理时间尚未确认。<a href="#s5">S5</a></td>
@@ -155,6 +155,11 @@ const followups = {
   received: '将证书与本批发票、车型说明交进口商核对。确认适用后索取优惠待遇下的每辆税费明细。',
   unavailable: '请进口商按普通待遇出具税费明细，用它核算本批最低报价。'
 };
+const updateTitles = {
+  unknown: '原产证明状态待确认',
+  received: '已收到原产证明，待核对',
+  unavailable: '本批原产证明暂缺'
+};
 const versions = ['unknown'];
 const el = id => document.getElementById(id);
 const historySelect = el('history');
@@ -169,7 +174,8 @@ function render(index) {
 }
 function appendVersion() {
   const index = versions.length - 1;
-  historySelect.add(new Option('第 ' + (index + 1) + ' 版 · ' + el('answer').selectedOptions[0].text, String(index)));
+  const title = index === 0 ? '泰国市场进入初筛' : updateTitles[versions[index]];
+  historySelect.add(new Option('第 ' + (index + 1) + ' 版 · ' + title, String(index)));
   render(index);
 }
 historySelect.onchange = () => { render(Number(historySelect.value)); el('notice').textContent = ''; };
